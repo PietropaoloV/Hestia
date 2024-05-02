@@ -1,6 +1,6 @@
 Read Me
 
-Hello
+Hello!
 
 ## How to run
 *Make sure your `venv` has not been created*
