@@ -1,0 +1,12 @@
+.venv/
+env/
+**/Lib
+**/node_modules
+**/Scripts
+**/__pycache__
+**/db.sqlite3
+**/db.sqlite3-journal
+**/000[0-9]_*
+**/0001_*
+**/processed_tickers.txt
+**/package-lock.json

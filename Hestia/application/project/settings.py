@@ -25,7 +25,11 @@ SECRET_KEY = 'django-insecure-z)wml5+1^)q47!&kr0#dekd#6g0frh(qs6s7bwaj1f2nl5!=#!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+)
 
 
 # Application definition
@@ -37,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'app',
 ]
 
@@ -48,6 +53,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'django.middleware.common.CommonMiddleware',
+
+    'corsheaders.middleware.CorsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -112,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
